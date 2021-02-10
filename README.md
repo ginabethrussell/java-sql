@@ -210,7 +210,7 @@ Below are some empty tables to be used to normalize the database
 
 Table Name: Person Table
 
-|  Person Id |    Name    |  Fence Id  |Location Id |            
+|  Person Id |   Name     |  Fence Id  |Location Id |            
 |------------|------------|------------|------------|
 |    1       |  Jane      |     2      |     1      |                  
 |    2       |  Bob       |     2      |     2      |    
@@ -219,15 +219,27 @@ Table Name: Person Table
 
 Table Name: Pet Table
 
-|   Pet Id   |     Name   |  Person Id |   Type Id  |          
-|------------|------------|------------|------------|
-|      1     |   Ellie    |    1       |     1      |            
-|      2     |   Joe      |    2       |     2      |           
-|      3     |  Ginger    |    3       |     1      |             
-|      4     |   Tiger    |    1       |     3      |            
-|      5     | Miss Kitty |    3       |     3      |             
-|      6     |  Bubble    |    3       |     5      |             
-|      7     |  Toby      |    1       |     4      |           
+|   Pet Id   |     Name   |   Type Id  |          
+|------------|------------|------------|
+|      1     |   Ellie    |     1      |            
+|      2     |   Joe      |     2      |           
+|      3     |  Ginger    |     1      |             
+|      4     |   Tiger    |     3      |            
+|      5     | Miss Kitty |     3      |             
+|      6     |  Bubble    |     5      |             
+|      7     |  Toby      |     4      |           
+
+Table Name: Person/Pet Table
+
+| Person Id  |   Pet Id   | 
+|------------|------------|
+|     1      |    1       |            
+|     1      |    4       |           
+|     1      |    7       |           
+|     2      |    2       |            
+|     3      |    3       | 
+|     3      |    5       |
+|     3      |    6       |    
 
 Table Name: Pet Type
 
@@ -237,14 +249,14 @@ Table Name: Pet Type
 |     2      |   Horse    |           
 |     3      |    Cat     |           
 |     4      |   Turtle   |            
-|     5      |    Fish    |           
+|     5      |    Fish    |    
 
 Table Name: Fence
 
 |  Fence Id  |   Fence    |
 |------------|------------|
-|    1       |     No     |          
-|    2       |     Yes    |         
+|    1       |     Yes    |          
+|    2       |     No     |         
 
 
 Table Name: Location
