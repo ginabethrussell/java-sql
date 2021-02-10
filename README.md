@@ -296,6 +296,79 @@ WHERE customers.customer_id IN(
   * account `budget` is required.
 
 ```SQL
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 13.1
+-- Dumped by pg_dump version 13.1
+
+-- Started on 2021-02-10 17:53:21 EST
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- TOC entry 200 (class 1259 OID 16761)
+-- Name: accounts; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.accounts (
+    id integer NOT NULL,
+    name character varying(50)[] NOT NULL,
+    budget numeric NOT NULL
+);
+
+
+ALTER TABLE public.accounts OWNER TO postgres;
+
+--
+-- TOC entry 3247 (class 0 OID 16761)
+-- Dependencies: 200
+-- Data for Name: accounts; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.accounts (id, name, budget) FROM stdin;
+\.
+
+
+--
+-- TOC entry 3114 (class 2606 OID 16770)
+-- Name: accounts accounts_name_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.accounts
+    ADD CONSTRAINT accounts_name_key UNIQUE (name);
+
+
+--
+-- TOC entry 3116 (class 2606 OID 16768)
+-- Name: accounts accounts_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.accounts
+    ADD CONSTRAINT accounts_pkey PRIMARY KEY (id);
+
+
+-- Completed on 2021-02-10 17:53:21 EST
+
+--
+-- PostgreSQL database dump complete
+--
+
+
 
 ```
 
